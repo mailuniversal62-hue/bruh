@@ -1,0 +1,40 @@
+cat > config.py << 'EOF'
+# --- Broker ---
+POCKET_SSID = ""
+ASSET = "EURUSD_otc"
+TIMEFRAME = 60
+CANDLE_COUNT = 200
+
+# --- Indicators ---
+RSI_PERIOD = 14
+RSI_OVERSOLD = 30
+RSI_OVERBOUGHT = 70
+MACD_FAST = 12
+MACD_SLOW = 26
+MACD_SIGNAL = 9
+EMA_FAST = 9
+EMA_SLOW = 21
+MIN_AGREEING = 2
+
+# --- Trading ---
+PAPER_MODE = True
+TRADE_AMOUNT = 1.00
+COOLDOWN_SECONDS = 60
+MAX_TRADES_PER_HOUR = 10
+
+# --- Risk ---
+MAX_DAILY_LOSS = 10.00
+MAX_DRAWDOWN = 50.00
+STOP_AFTER_CONSECUTIVE_LOSSES = 5
+
+# --- Loop ---
+LOOP_INTERVAL = 5
+
+# --- Paths ---
+LOG_FILE = "logs/trades.csv"
+STATE_FILE = "logs/state.json"
+
+# --- Dashboard ---
+DASHBOARD_HOST = "0.0.0.0"
+DASHBOARD_PORT = 5000
+EOF
