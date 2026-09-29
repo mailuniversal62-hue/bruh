@@ -14,3 +14,29 @@ push to GitHub (once it runs)
 git add .
 git commit -m "Initial commit"
 git push
+
+
+
+
+git clone
+
+
+cd ~
+git clone https://github.com/mailuniversal62-hue/bruh.git
+cd bruh
+mkdir -p logs templates
+touch logs/.gitkeep
+
+
+paste kali
+
+cat > .gitignore << 'EOF'
+venv/
+__pycache__/
+*.pyc
+logs/*.log
+logs/*.csv
+logs/state.json
+.env
+config.local.py
+EOF
