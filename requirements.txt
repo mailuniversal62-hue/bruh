@@ -1,4 +1,4 @@
-cat > requirements.txt << 'EOF'
+
 BinaryOptionsToolsV2
 flask
 pandas
