@@ -1,0 +1,19 @@
+cat > acetrader.service << 'EOF'
+[Unit]
+Description=AceTrader bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ace
+WorkingDirectory=/home/ace/acetrader
+ExecStart=/home/ace/acetrader/venv/bin/python3 /home/ace/acetrader/main.py
+Restart=always
+RestartSec=10
+StandardOutput=append:/home/ace/acetrader/logs/bot.log
+StandardError=append:/home/ace/acetrader/logs/bot.log
+
+[Install]
+WantedBy=multi-user.target
+EOF
