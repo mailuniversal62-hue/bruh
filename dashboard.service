@@ -1,0 +1,19 @@
+cat > dashboard.service << 'EOF'
+[Unit]
+Description=AceTrader dashboard
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ace
+WorkingDirectory=/home/ace/acetrader
+ExecStart=/home/ace/acetrader/venv/bin/python3 /home/ace/acetrader/dashboard.py
+Restart=always
+RestartSec=10
+StandardOutput=append:/home/ace/acetrader/logs/dash.log
+StandardError=append:/home/ace/acetrader/logs/dash.log
+
+[Install]
+WantedBy=multi-user.target
+EOF
